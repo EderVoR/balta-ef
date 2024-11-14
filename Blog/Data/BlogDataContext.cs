@@ -10,8 +10,8 @@ namespace Blog.Data
         // public DbSet<PostTag> PostTags { get; set; }
         // public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Grupo> Grupos { get; set; }
-        public DbSet<Tag> Tags { get; set; }
+        // public DbSet<Grupo> Grupos { get; set; }
+        // public DbSet<Tag> Tags { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
