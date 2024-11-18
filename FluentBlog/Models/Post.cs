@@ -1,6 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace Blog.Models
 {
     public class Post
@@ -16,5 +13,7 @@ namespace Blog.Models
         public Category Category { get; set; }
         public int AuthorId { get; set; }
         public Usuario Author { get; set; }
+
+        public List<Tag> Tags { get; set; }
     }
 }
