@@ -20,7 +20,7 @@ namespace Blog.Data.Mappings
 
             builder.Property(x => x.Title)
                 .IsRequired()
-                .HasColumnName("tile")
+                .HasColumnName("title")
                 .HasColumnType("VARCHAR")
                 .HasMaxLength(80);
 
@@ -31,7 +31,7 @@ namespace Blog.Data.Mappings
                 .HasColumnName("body");
             
             builder.Property(x => x.Slug)
-                .HasColumnName("name");
+                .HasColumnName("slug");
 
             builder.Property(x => x.AuthorId)
                 .HasColumnName("authorid");
