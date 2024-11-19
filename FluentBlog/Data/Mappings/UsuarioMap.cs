@@ -10,8 +10,7 @@ namespace Blog.Data.Mappings
         {
             builder.ToTable("usuario");
 
-            builder.HasKey(x => x.Id)
-                .HasName("id");
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
                 .HasColumnName("id")
@@ -35,6 +34,9 @@ namespace Blog.Data.Mappings
 
             builder.Property(x => x.PasswordHash)
                 .HasColumnName("passwordhash");
+
+            builder.Property(x => x.Github)
+            .HasColumnName("github");
 
             builder.Property(x => x.Slug)
                 .IsRequired()

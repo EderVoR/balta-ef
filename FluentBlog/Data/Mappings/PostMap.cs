@@ -10,8 +10,7 @@ namespace Blog.Data.Mappings
         {
             builder.ToTable("post");
 
-            builder.HasKey(x => x.Id)
-                .HasName("id");
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
                 .HasColumnName("id")
@@ -42,16 +41,16 @@ namespace Blog.Data.Mappings
             builder.Property(x => x.CreateDate)
                 .IsRequired()
                 .HasColumnName("createdate")
-                .HasColumnType("timestamp")
+                .HasColumnType("timestamp(6)")
                 .HasMaxLength(60)
-                .HasDefaultValue(DateTime.Now.ToUniversalTime());
+                .HasDefaultValue(DateTime.Now);
 
             builder.Property(x => x.LastUpdateDate)
                 .IsRequired()
                 .HasColumnName("lastupdatedate")
-                .HasColumnType("timestamp")
+                .HasColumnType("timestamp(6)")
                 .HasMaxLength(60)
-                .HasDefaultValue(DateTime.Now.ToUniversalTime());
+                .HasDefaultValue(DateTime.Now);
 
             builder.HasIndex(x => x.Slug, "IX_Post_Slug")
                 .IsUnique();

@@ -10,8 +10,7 @@ namespace Blog.Data.Mappings
         {
             builder.ToTable("category");
 
-            builder.HasKey(x => x.Id)
-                .HasName("id");
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
                 .HasColumnName("id")

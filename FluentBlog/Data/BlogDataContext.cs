@@ -12,7 +12,10 @@ namespace Blog.Data
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseNpgsql("User ID=postgres; Password=admin123; Server=localhost; Port=5432; Database=blog; Pooling=true;");
+        {
+            optionsBuilder.UseNpgsql("User ID=postgres; Password=admin123; Server=localhost; Port=5432; Database=Fluentblog; Pooling=true;");
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
